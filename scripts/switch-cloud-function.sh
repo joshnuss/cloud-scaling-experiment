@@ -1,4 +1,6 @@
 #!/bin/bash
+
+# update the load balancer's backend to use the serverless endpoint group (points to the cloud function)
 curl -X PATCH \
   -H "Authorization: Bearer $(gcloud auth print-access-token)" \
   -H "content-type: application/json" \
