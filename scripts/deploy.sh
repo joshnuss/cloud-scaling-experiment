@@ -25,7 +25,7 @@ gcloud functions add-invoker-policy-binding \
   --region=$REGION \
   --member="allUsers"
 
-# start a rolling upgrade for dedicated servers (if any)gcloud compute instance-groups managed rolling-action replace instance-group-1 --zone=us-east1-b
+# start a rolling upgrade for dedicated servers (if any)
 gcloud compute instance-groups managed rolling-action replace \
   instance-group-1 \
   --zone=us-east1-b
