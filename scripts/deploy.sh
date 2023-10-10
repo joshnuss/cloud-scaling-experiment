@@ -6,8 +6,8 @@ PROJECT=$(gcloud config get-value project)
 echo "deploying $PROJECT in $REGION"
 
 # push Docker image
-docker tag dedicated-web $REGION-docker.pkg.dev/$PROJECT/quickstart-docker-repo/dedicated-web:latest
-docker push $REGION-docker.pkg.dev/$PROJECT/quickstart-docker-repo/dedicated-web
+docker tag dedicated-web $REGION-docker.pkg.dev/$PROJECT/quickstart-docker-repo/quickstart-image:latest
+docker push $REGION-docker.pkg.dev/$PROJECT/quickstart-docker-repo/quickstart-image
 
 # deploy cloud function
 gcloud functions deploy \
@@ -24,3 +24,8 @@ gcloud functions add-invoker-policy-binding \
   function-test \
   --region=$REGION \
   --member="allUsers"
+
+# start a rolling upgrade for dedicated servers (if any)gcloud compute instance-groups managed rolling-action replace instance-group-1 --zone=us-east1-b
+gcloud compute instance-groups managed rolling-action replace \
+  instance-group-1 \
+  --zone=us-east1-b
