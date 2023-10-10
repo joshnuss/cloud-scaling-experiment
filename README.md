@@ -4,11 +4,13 @@ Scaling between cloud functions and dedicated servers.
 
 ## Why?
 
-It's cheapest to start with cloud functions (fractional ownership). But once a steady load is acheived, it becomes cheaper to use dedicated servers instead (monthly committment).
+It's cheapest to start with cloud functions (fractional ownership). But once a steady load is acheived, it becomes cheaper to use dedicated servers (monthly committment).
 
-For example, if the cheapest dedicated server is $7/month, once you reach $7 of usage with cloud functions, it's cheaper to switch over to dedicated.
+For example, if the cheapest dedicated server is $7/month, once $7 of usage is reached with cloud functions, it's cheaper to switch over to dedicated servers.
 
-Right now, you'd have to change hosts. Which is a painful migration. This experiment aims to prove a single hosting provider can easily swap between both options.
+Right now, it would mean changing hosts, since most specialize in one style or the other. It's a painful migration.
+
+This experiment aims to prove a single hosting provider can easily swap between both options.
 
 ## How it works
 
@@ -18,7 +20,7 @@ A load balancer is provisioned, and by default it directs traffic to the cloud f
 
 To switch from a cloud function to a dedicated machine, all that's needed to is to boot a new dedicated instance and update the load balancer to point to the dedicated instance group.
 
-The same codebase `routes.js` is used for both scenarios. They are just wrapped differently, see wrappers `dedicated.js` and `function.js`.
+The same codebase [`routes.js`](/blob/main/routes.js) is used for both scenarios. They are just wrapped differently, see wrappers [`dedicated.js`](/blob/main/dedicated.js) and [`function.js`](/blob/main/function.js).
 
 ## License
 
