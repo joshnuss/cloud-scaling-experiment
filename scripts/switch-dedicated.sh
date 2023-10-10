@@ -1,4 +1,6 @@
 #!/bin/bash
+
+# update the load balancer to point to the instance group (it's a group of dedicated servers)
 curl -X PATCH \
   -H "Authorization: Bearer $(gcloud auth print-access-token)" \
   -H "content-type: application/json" \
