@@ -17,11 +17,11 @@ gcloud functions deploy \
   --trigger-http \
   --allow-unauthenticated \
   --entry-point=main \
-  function-test
+  function-example
 
 # allow function to be called by anyone
 gcloud functions add-invoker-policy-binding \
-  function-test \
+  function-example \
   --region=$REGION \
   --member="allUsers"
 
