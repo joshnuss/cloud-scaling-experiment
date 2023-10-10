@@ -22,6 +22,12 @@ To switch from a cloud function to a dedicated machine, all that's needed to is 
 
 The same codebase [`routes.js`](/routes.js) is used for both scenarios. They are just wrapped differently, see wrappers [`dedicated.js`](/dedicated.js) and [`function.js`](/function.js).
 
+## Scripts
+
+- [`build`](/scripts/build.sh): Build a Docker image.
+- [`run`](/scripts/run.sh): Run Docker container locally.
+- [`stop`](/scripts/stop.sh): Stop locally running Docker container.
+
 ## License
 
 MIT
