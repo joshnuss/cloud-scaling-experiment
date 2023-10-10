@@ -28,6 +28,8 @@ The same codebase [`routes.js`](/routes.js) is used for both scenarios. They are
 - [`run`](/scripts/run.sh): Run Docker container locally.
 - [`stop`](/scripts/stop.sh): Stop locally running Docker container.
 - [`deploy`](/scripts/deploy.sh): Deploy docker image and cloud function.
+- [`switch-dedicated`](/scripts/switch-to-dedicated.sh): Switch to dedicated servers.
+- [`switch-cloud-function`](/scripts/switch-cloud-function.sh): Switch to cloud functions.
 
 **Note**: I have not written a script to perform provisioning, as it's just busy work. I provisioned manually by creating a gcloud project, load balancer, instance template, and instance group.
 
