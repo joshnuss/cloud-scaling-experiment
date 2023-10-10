@@ -29,6 +29,8 @@ The same codebase [`routes.js`](/routes.js) is used for both scenarios. They are
 - [`stop`](/scripts/stop.sh): Stop locally running Docker container.
 - [`deploy`](/scripts/deploy.sh): Deploy docker image and cloud function.
 
+**Note**: I have not written a script to perform provision, as it's just busy work. I did the provisioning manually by creating a load balancer, instance template, and instance group.
+
 ## License
 
 MIT
