@@ -20,7 +20,7 @@ A load balancer is provisioned, and by default it directs traffic to the cloud f
 
 To switch from a cloud function to a dedicated machine, all that's needed to is to boot a new dedicated instance and update the load balancer to point to the dedicated instance group.
 
-The same codebase [`routes.js`](/blob/main/routes.js) is used for both scenarios. They are just wrapped differently, see wrappers [`dedicated.js`](/blob/main/dedicated.js) and [`function.js`](/blob/main/function.js).
+The same codebase [`routes.js`](/routes.js) is used for both scenarios. They are just wrapped differently, see wrappers [`dedicated.js`](/dedicated.js) and [`function.js`](/function.js).
 
 ## License
 
