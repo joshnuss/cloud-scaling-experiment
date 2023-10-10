@@ -27,6 +27,7 @@ The same codebase [`routes.js`](/routes.js) is used for both scenarios. They are
 - [`build`](/scripts/build.sh): Build a Docker image.
 - [`run`](/scripts/run.sh): Run Docker container locally.
 - [`stop`](/scripts/stop.sh): Stop locally running Docker container.
+- [`deploy`](/scripts/deploy.sh): Deploy docker image and cloud function.
 
 ## License
 
